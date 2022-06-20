@@ -1,0 +1,162 @@
+{
+  "main": {
+    "name": "Abhishek Kumar",
+    "occupation": "Software Development Engineer",
+    "description": "A computer enthusiast passionate about software development. Experienced in working with teams in different software development stages, ensuring high quality and fulfillment of business requirements.",
+    "image": "profilepic.jpg",
+    "bio": "Graduated from IIT(ISM) Dhanbad (Batch of 2017), with a strong foundation in programming and software engineering. Proficient in a variety of platforms, languages and their respective frameworks, with an innate ability to learn and master new technoligies.",
+    "contactmessage": "Actively seeking for jobs. Drop your details for inquiry",
+    "email": "abhishekism0010@gmail.com",
+    "phone": "+91-98877006278",
+    "address": {
+      "street": "Kankadbagh",
+      "city": "Patna ",
+      "state": "Bihar",
+      "zip": "800020"
+    },
+    "website": "<WEBSITE>",
+    "resumedownload": "<GOOGLE DRIVE LINK>",
+    "social": [
+      {
+        "name": "facebook",
+        "url": "http://facebook.com/abhishek0010",
+        "className": "fa fa-facebook"
+      },
+      {
+        "name": "twitter",
+        "url": "http://twitter.com/_a_k_0_0_1_0_",
+        "className": "fa fa-twitter"
+      },
+      {
+        "name": "linkedin",
+        "url": "https://www.linkedin.com/in/abhishehk0010/",
+        "className": "fa fa-linkedin"
+      },
+      {
+        "name": "instagram",
+        "url": "http://instagram.com/0010ak",
+        "className": "fa fa-instagram"
+      },
+      {
+        "name": "github",
+        "url": "http://github.com/abhishek0010",
+        "className": "fa fa-github"
+      }
+    ]
+  },
+  "resume": {
+    "skillmessage": "Confident in these:",
+    "education": [
+      {
+        "school": "Indian Institute of Technology(ISM), Dhanbad",
+        "degree": "Bachelor of Technology in Computer Science & Engineering",
+        "graduated": "May 2017",
+        "description": "Graduated with OGPA of 7.64"
+      }
+    ],
+    "work": [
+      {
+        "company": "SpillBox Inc",
+        "title": "Software Engineer",
+        "years": "--",
+        "description": "Responsible for infrastructure management, cache testing and authentication microservice"
+      },
+      {
+        "company": "Buring Glass Technologies",
+        "title": "Advanced Software Engineer",
+        "years": "--",
+        "description": "Responsible for database migration with validation and scraping infrastructure development and management"
+      },
+      {
+        "company": "Juniper Networks",
+        "title": "Software Development Intern",
+        "years": "--",
+        "description": "Responsible for creation of netlink activity monitor for a cloud orchestration platform"
+      }
+    ],
+    "skills": [
+      {
+        "name": "Java",
+        "level": "70%"
+      },
+      {
+        "name": "Python",
+        "level": "70%"
+      },
+      {
+        "name": "ReactJs",
+        "level": "50%"
+      },
+      {
+        "name": "Javascript",
+        "level": "60%"
+      },
+      {
+        "name": "Dev-Ops",
+        "level": "50%"
+      },
+      {
+        "name": "C++",
+        "level": "60%"
+      },
+      {
+        "name": "GO",
+        "level": "50%"
+      },
+      {
+        "name": "Swift",
+        "level": "50%"
+      },
+      {
+        "name": "MY-SQL",
+        "level": "70%"
+      }
+    ]
+  },
+  "portfolio": {
+    "projects": [
+      {
+        "title": "Canadian Wanderlust",
+        "category": "My Travel Blog for my post-university travels",
+        "image": "canadian-wanderlust.jpg",
+        "url": "https://www.canadianwanderlust.com"
+      },
+      {
+        "title": "Fury Fighting Gear",
+        "category": "(offline now) A fighting gear company I started",
+        "image": "fury-fighting-gear.jpg",
+        "url": "http://www.timbakerdev.com"
+      },
+      {
+        "title": "Original Thai Food",
+        "category": "Website I built for a restaurant I like in Thailand",
+        "image": "original-thai-food.jpg",
+        "url": "http://www.timbakerdev.com/originalthaifood.github.io"
+      },
+      {
+        "title": "Resume Website",
+        "category": "A React based resume website template",
+        "image": "resume-website.jpg",
+        "url": "http://www.timbakerdev.com"
+      },
+      {
+        "title": "Smirkspace",
+        "category": "(MVP Only) A React and Meteor based chat University project.",
+        "image": "smirkspace.jpg",
+        "url": "http://www.smirkspace.com"
+      }
+    ]
+  },
+  "testimonials": {
+    "testimonials": [
+      {
+        "text": "Here you should write some nice things that someone has said about you. No lies though, employers can tell when you are lying.",
+        "user": "Kareem Abdul Jabbar"
+      },
+      {
+        "text": "That Tim Baker must be one of the most brilliant developers I've ever met! It is amazing that nobody has hired him yet. Hey you, you should hire this guy, he may be fresh out of University and have zero on the job experience but I am confident that he will be one of your best developers in no time!",
+        "user": "Steve Wozniak... impersonator"
+      }
+    ]
+  }
+}

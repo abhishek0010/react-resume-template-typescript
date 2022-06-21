@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactGA from 'react-ga';
+import ReactGA from 'react-ga4';
 import './App.css';
 import Header from './Components/Header';
 import Footer from './Components/Footer';
@@ -101,8 +101,8 @@ class App extends React.Component<AppProps, AppState> {
 
     constructor(props: AppProps) {
       super(props);
-      ReactGA.initialize('UA-110570651-1');
-      ReactGA.pageview(window.location.pathname);
+      ReactGA.initialize('G-88NECJ3PYR');
+      ReactGA.send('pageview');
     }
 
   componentDidMount(){

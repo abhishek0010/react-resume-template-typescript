@@ -1,6 +1,6 @@
 {
   "name": "abhishek0010.github.io",
-  "homepage": "https://myusername.github.io",
+  "homepage": "https://abhishek0010.github.io",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -17,7 +17,7 @@
     "particles-bg": "^2.5.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-ga": "^3.3.1",
+    "react-ga4": "^1.4.1",
     "react-scripts": "5.0.1",
     "typescript": "^4.7.4",
     "web-vitals": "^2.1.4"

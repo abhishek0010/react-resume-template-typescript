@@ -6,8 +6,8 @@ import Footer from './Components/Footer';
 import About from './Components/About';
 import Resume from './Components/Resume';
 import Contact from './Components/Contact';
-import Testimonials from './Components/Testimonials';
-import Portfolio from './Components/Portfolio';
+//import Testimonials from './Components/Testimonials';
+//import Portfolio from './Components/Portfolio';
 
 type ResumeData = {
   main: {
@@ -79,17 +79,21 @@ type ResumeData = {
   }
 }
 
+type NavItems = {
+  name: string,
+  link: string
+}
+
 interface AppProps {
 };
 
 interface AppState {
 
   foo: string,
-  resumeData: ResumeData, 
+  resumeData: ResumeData
 }
 class App extends React.Component<AppProps, AppState> {
 
-  
     state: AppState = {
       foo: 'bar',
       resumeData: {} as ResumeData
@@ -106,9 +110,37 @@ class App extends React.Component<AppProps, AppState> {
     .then( response => response.json())
     .then( json => {this.setState({resumeData: json});
     });
+    //this.state.navProps = this.createNavProps(this.state.resumeData);
   }
+/*
+  createNavProps(resumeData: ResumeData):NavItems[] {
+    let navProps: NavItems[] = [
+      {
+        name: "Home",
+        link: "home"
+      },
+      {
+        name: "About",
+        link: "about"
+      },
+      {
+        name: "Resume",
+        link: "resume"
+      },
+    ]
+    if(Object.keys(resumeData.portfolio.projects).length!==0) {
+      navProps.push({name: "Portfolio", link: "portfolio"});
+    }
+    if(Object.keys(resumeData.testimonials.testimonials).length!==0) {
+      navProps.push({name: "Testimonials", link: "testionials"});
+    }
+    navProps.push({name:"Contact", link: "contact"});
 
+    return navProps;
+  }
+*/
   render() {
+    console.log(this.state.resumeData);
     return (
       <div className="App">
         <Header data={this.state.resumeData.main}/>

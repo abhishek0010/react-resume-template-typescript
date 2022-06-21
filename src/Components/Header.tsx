@@ -1,5 +1,7 @@
-import React, { Component } from "react";
+import React, { Component} from "react";
 import ParticlesBg from "particles-bg";
+import "animate.css";
+
 
 interface HeaderProps {
   data: any;
@@ -24,11 +26,41 @@ class Header extends Component<HeaderProps, HeaderState> {
         );
       });
     }
+/*
+    if (Object.keys(this.props.navProps).length !== 0) {
+      console.log(this.props.navProps);
+      var navProps = this.props.navProps.map(
+        (navItem: { name: string; link: string }) => {
+          return (
+            <li>
+              <a className="smoothscroll" href={"#" + navItem.link}>
+                {navItem.name}
+              </a>
+            </li>
+          );
+        }
+      );
+      var navBar = () => {
+        return (
+          <nav id="nav-wrap">
+          <a className="mobile-btn" href="#nav-wrap" title="Show navigation">
+            Show navigation
+          </a>
+          <a className="mobile-btn" href="#home" title="Hide navigation">
+            Hide navigation
+          </a>
 
+          <ul id="nav" className="nav">
+            {navProps}
+          </ul>
+        </nav>
+        )
+      }
+    }
+    */
     return (
       <header id="home">
         <ParticlesBg type="lines" bg={true} />
-
         <nav id="nav-wrap">
           <a className="mobile-btn" href="#nav-wrap" title="Show navigation">
             Show navigation
@@ -43,24 +75,16 @@ class Header extends Component<HeaderProps, HeaderState> {
                 Home
               </a>
             </li>
+
             <li>
               <a className="smoothscroll" href="#about">
                 About
               </a>
             </li>
+
             <li>
               <a className="smoothscroll" href="#resume">
                 Resume
-              </a>
-            </li>
-            <li>
-              <a className="smoothscroll" href="#portfolio">
-                Works
-              </a>
-            </li>
-            <li>
-              <a className="smoothscroll" href="#testimonials">
-                Testimonials
               </a>
             </li>
             <li>
@@ -70,9 +94,9 @@ class Header extends Component<HeaderProps, HeaderState> {
             </li>
           </ul>
         </nav>
-
+        
         <div className="row banner">
-          <div className="banner-text">
+          <div className="banner-text animate__animated animate__bounceIn">
             <h1 className="responsive-headline">I'm {name}.</h1>
             <h3>
               I'm a {city} based <span>{occupation}</span>. {description}.

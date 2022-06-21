@@ -11,7 +11,9 @@
     "@types/node": "^16.11.41",
     "@types/react": "^18.0.14",
     "@types/react-dom": "^18.0.5",
+    "animate.css": "^4.1.1",
     "gh-pages": "^4.0.0",
+    "jquery": "^3.6.0",
     "particles-bg": "^2.5.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -45,8 +47,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "@types/jquery": "^3.5.14"
   }
 }

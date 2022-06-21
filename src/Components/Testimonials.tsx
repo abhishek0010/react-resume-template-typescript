@@ -11,7 +11,7 @@ interface TestimonialsState{
 class Testimonials extends Component<TestimonialsProps, TestimonialsState> {
   render() {
 
-    if(this.props.data){
+    if(Object.keys(this.props.data.testimonials).length!==0){
       var testimonials = this.props.data.testimonials.map(function(testimonials: any){
         return  <li key={testimonials.user}>
             <blockquote>
@@ -20,26 +20,27 @@ class Testimonials extends Component<TestimonialsProps, TestimonialsState> {
             </blockquote>
          </li>
       })
-    }
-
-    return (
-      <section id="testimonials">
-      <div className="text-container">
-         <div className="row">
-
-            <div className="two columns header-col">
-               <h1><span>Client Testimonials</span></h1>
-            </div>
-
-            <div className="ten columns flex-container">
-                  <ul className="slides">
-                      {testimonials}
-                  </ul>
+      return (
+         <section id="testimonials">
+         <div className="text-container">
+            <div className="row">
+   
+               <div className="two columns header-col">
+                  <h1><span>Client Testimonials</span></h1>
+               </div>
+   
+               <div className="ten columns flex-container">
+                     <ul className="slides">
+                         {testimonials}
+                     </ul>
+                  </div>
                </div>
             </div>
-         </div>
-   </section>
-    );
+      </section>
+       );
+    } else { return <div/>}
+
+
   }
 }
 

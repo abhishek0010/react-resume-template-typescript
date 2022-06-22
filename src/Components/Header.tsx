@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 
-import { Textfit } from 'react-textfit';
 import ParticlesBg from "particles-bg";
 import "animate.css";
+
 
 interface HeaderProps {
   data: any;
@@ -43,11 +43,11 @@ class Header extends Component<HeaderProps, HeaderState> {
         }
       );
       navBar = (
-        <div>
+        <React.Fragment>
           <ul id="nav" className="nav">
             {navProps}
           </ul>
-        </div>
+        </React.Fragment>
       );
     }
 
@@ -65,9 +65,7 @@ class Header extends Component<HeaderProps, HeaderState> {
         </nav>
         <div className="row banner">
           <div className="banner-text animate__animated animate__bounceIn">
-          <Textfit mode="single">
-            <h1 >I'm {name}.</h1>
-            </Textfit>
+            <h1 className="responsive-headline">I'm {name}.</h1>
             <h3>
               I'm a {city} based <span>{occupation}</span>. {description}.
             </h3>

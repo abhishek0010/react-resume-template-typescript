@@ -1,13 +1,14 @@
 import React from 'react';
 import ReactGA from 'react-ga4';
 import './App.css';
+import * as resumedata from './resumeData.json';
 import Header from './Components/Header';
 import Footer from './Components/Footer';
 import About from './Components/About';
 import Resume from './Components/Resume';
 import Contact from './Components/Contact';
-//import Testimonials from './Components/Testimonials';
-//import Portfolio from './Components/Portfolio';
+import Testimonials from './Components/Testimonials';
+import Portfolio from './Components/Portfolio';
 
 type ResumeData = {
   main: {
@@ -26,62 +27,56 @@ type ResumeData = {
     },
     website: string,
     resumedownload: string,
-    social: [
+    social: 
       {
         name: string,
         url: string,
         className: string,
-      }
-    ]
+      }[]
   },
   resume: {
     skillmessage: string,
-    education: [
+    education:
       {
         school: string,
         degree: string,
         graduated: string,
         description: string
-      }
-    ],
-    work: [
+      }[],
+    work:
       {
         company: string,
         title: string,
         years: string,
         description: string
-      }
-    ],
-    skills: [
+      }[],
+    skills:
       {
         name: string,
         level: string
-      }
-    ]
+      }[]
   },
   portfolio: {
-    projects: [
+    projects: 
       {
         title: string,
         category: string,
         image: string,
         url: string
-      }
-    ]
+      }[]
   },
   testimonials: {
-    testimonials: [
+    testimonials:
       {
         text: string,
         user: string
-      }
-    ]
+      }[]
   }
 }
 
 type NavItems = {
-  name: string,
-  link: string
+   name: string,
+   link: string
 }
 
 interface AppProps {
@@ -90,29 +85,32 @@ interface AppProps {
 interface AppState {
 
   foo: string,
-  resumeData: ResumeData
+  resumeData: ResumeData,
+  navProps: NavItems[]
 }
 class App extends React.Component<AppProps, AppState> {
 
     state: AppState = {
       foo: 'bar',
-      resumeData: {} as ResumeData
+      resumeData: resumedata,
+      navProps: {} as NavItems[]
     };
 
     constructor(props: AppProps) {
       super(props);
       ReactGA.initialize('G-88NECJ3PYR');
       ReactGA.send('pageview');
+      
     }
 
   componentDidMount(){
-    fetch('/resumeData.json')
-    .then( response => response.json())
-    .then( json => {this.setState({resumeData: json});
-    });
-    //this.state.navProps = this.createNavProps(this.state.resumeData);
+    // fetch('/resumeData.json')
+    // .then( response => response.json())
+    // .then( json => 
+    //this.setState({resumeData: resumedata});
+    this.setState({navProps: this.createNavProps(this.state.resumeData)});
   }
-/*
+
   createNavProps(resumeData: ResumeData):NavItems[] {
     let navProps: NavItems[] = [
       {
@@ -138,24 +136,22 @@ class App extends React.Component<AppProps, AppState> {
 
     return navProps;
   }
-*/
+
   render() {
-    console.log(this.state.resumeData);
+    
+    console.log(this.state.navProps);
     return (
       <div className="App">
-        <Header data={this.state.resumeData.main}/>
+        <Header data={this.state.resumeData.main} navProps={this.state.navProps}/>
         <About data={this.state.resumeData.main}/>
         <Resume data={this.state.resumeData.resume}/>
+        <Portfolio data={this.state.resumeData.portfolio}/>
+        <Testimonials data={this.state.resumeData.testimonials}/>
         <Contact data={this.state.resumeData.main}/>
         <Footer data={this.state.resumeData.main}/>
       </div>
     );
   }
 }
-
-/* Additional Fields can be added to return
-<Portfolio data={this.state.resumeData.portfolio}/>
-        <Testimonials data={this.state.resumeData.testimonials}/>
-        */
 
 export default App;

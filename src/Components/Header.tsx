@@ -4,7 +4,8 @@ import "animate.css";
 
 
 interface HeaderProps {
-  data: any;
+  data: any,
+  navProps: {name: string, link: string}[]
 }
 
 interface HeaderState {}
@@ -26,7 +27,7 @@ class Header extends Component<HeaderProps, HeaderState> {
         );
       });
     }
-/*
+    var navBar;
     if (Object.keys(this.props.navProps).length !== 0) {
       console.log(this.props.navProps);
       var navProps = this.props.navProps.map(
@@ -40,61 +41,30 @@ class Header extends Component<HeaderProps, HeaderState> {
           );
         }
       );
-      var navBar = () => {
-        return (
-          <nav id="nav-wrap">
-          <a className="mobile-btn" href="#nav-wrap" title="Show navigation">
-            Show navigation
-          </a>
-          <a className="mobile-btn" href="#home" title="Hide navigation">
-            Hide navigation
-          </a>
+      navBar = (
+
+<div>
+          
 
           <ul id="nav" className="nav">
             {navProps}
           </ul>
-        </nav>
-        )
-      }
+          </div>
+      )
     }
-    */
+
     return (
       <header id="home">
         <ParticlesBg type="lines" bg={true} />
-        <nav id="nav-wrap">
-          <a className="mobile-btn" href="#nav-wrap" title="Show navigation">
+        <nav id="nav-wrap"><a className="mobile-btn" href="#nav-wrap" title="Show navigation">
             Show navigation
           </a>
           <a className="mobile-btn" href="#home" title="Hide navigation">
             Hide navigation
           </a>
-
-          <ul id="nav" className="nav">
-            <li className="current">
-              <a className="smoothscroll" href="#home">
-                Home
-              </a>
-            </li>
-
-            <li>
-              <a className="smoothscroll" href="#about">
-                About
-              </a>
-            </li>
-
-            <li>
-              <a className="smoothscroll" href="#resume">
-                Resume
-              </a>
-            </li>
-            <li>
-              <a className="smoothscroll" href="#contact">
-                Contact
-              </a>
-            </li>
-          </ul>
-        </nav>
-        
+            {navBar}
+          
+            </nav>
         <div className="row banner">
           <div className="banner-text animate__animated animate__bounceIn">
             <h1 className="responsive-headline">I'm {name}.</h1>
@@ -117,3 +87,36 @@ class Header extends Component<HeaderProps, HeaderState> {
 }
 
 export default Header;
+/* <nav id="nav-wrap">
+          <a className="mobile-btn" href="#nav-wrap" title="Show navigation">
+            Show navigation
+          </a>
+          <a className="mobile-btn" href="#home" title="Hide navigation">
+            Hide navigation
+          </a>
+
+          <ul id="nav" className="nav"></ul> */
+// <li className="current">
+//               <a className="smoothscroll" href="#home">
+//                 Home
+//               </a>
+//             </li>
+
+//             <li>
+//               <a className="smoothscroll" href="#about">
+//                 About
+//               </a>
+//             </li>
+
+//             <li>
+//               <a className="smoothscroll" href="#resume">
+//                 Resume
+//               </a>
+//             </li>
+//             <li>
+//               <a className="smoothscroll" href="#contact">
+//                 Contact
+//               </a>
+//             </li>
+//</ul>
+//</nav>

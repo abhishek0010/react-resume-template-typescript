@@ -45,7 +45,7 @@ class Contact extends Component<ContactProps, ContactState>{
          <div className="row">
             <div className="eight columns">
 
-               <form action="https://formsubmit.co/c8361e6b66f4b043d6a3926811299e6c" method="post" id="contactForm" name="contactForm">
+               <form action="<your formsubmit link>" method="post" id="contactForm" name="contactForm">
 					<fieldset>
 
                   <div>

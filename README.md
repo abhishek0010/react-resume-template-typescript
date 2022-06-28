@@ -41,10 +41,10 @@ npm run deploy
 ```
 
 -----------------------------------------------------------------------------------------------------------------------------------
-##Additional Changes:
+## Additional Changes:
 
 ### Change page *<title>* from public/index.html.
 
-### Add your own Google Analytics, and paste yout management id in *react-ga* within src/App.tsx.
+### Add your own Google Analytics, and paste your management id in *react-ga* within src/App.tsx.
 
 ### Configure your contact-us section for getting emails using [formsubmit.co](https://www.formsubmit.co)

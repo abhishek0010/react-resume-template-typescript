@@ -20,7 +20,7 @@ I have modified the codebase to work with typscript.
 ### 1. Clone the project
 
 ### 2. Make changes
-Edit the resume.json file to your specification.
+Change *package.json* *resume.json* file to your specification.
 
 ### 2. Run the project
 ```shell
